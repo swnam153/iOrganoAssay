@@ -19,15 +19,7 @@ interface enables:
 - Longitudinal mean ± SD line plots and violin plots
 - Category-based filtering by mouse line, passage(p), day(d), and microwell(W)
 
-<img width="1182" height="1129" alt="image" src="https://github.com/user-attachments/assets/8980992d-535c-42c7-a99a-8e749f8b2703" />
-
-
-<img width="1164" height="1095" alt="image" src="https://github.com/user-attachments/assets/c8dfb0f9-4d59-4740-9434-fc00849103f9" />
-
-<img width="1094" height="983" alt="image" src="https://github.com/user-attachments/assets/97b4509c-15ac-47e7-a137-7d374610d6f6" />
-
-<img width="1256" height="1129" alt="image" src="https://github.com/user-attachments/assets/fe865e10-6b08-48f3-924e-3c3d23c581a7" />
-
+<img width="792" height="756" alt="image" src="https://github.com/user-attachments/assets/8980992d-535c-42c7-a99a-8e749f8b2703" />
 
 ---
 

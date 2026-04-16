@@ -125,10 +125,27 @@ ui <- fluidPage(
 server <- function(input, output, session){
   
   # resource path
+  #observe({
+  #  addResourcePath("img", input$img_dir)
+  #  addResourcePath("seg", input$seg_dir)
+  #})
+  
   observe({
-    addResourcePath("img", input$img_dir)
-    addResourcePath("seg", input$seg_dir)
+    
+    if(!dir.exists(input$img_dir)){
+      showNotification("IMG folder does not exist", type="warning")
+    } else {
+      addResourcePath("img", input$img_dir)
+    }
+    
+    if(!dir.exists(input$seg_dir)){
+      showNotification("SEG folder does not exist", type="warning")
+    } else {
+      addResourcePath("seg", input$seg_dir)
+    }
+    
   })
+  
   
   # metadata
   meta <- reactive({
@@ -215,7 +232,7 @@ server <- function(input, output, session){
     
     tags$div(
       style = "display:flex; flex-wrap:wrap; gap:15px;",
-
+      
       lapply(files, function(f){        
         
         tags$div(
@@ -326,10 +343,10 @@ server <- function(input, output, session){
       geom_violin(position=position_dodge(0.8),
                   alpha=0.5) +
       
-     geom_jitter(aes(color=microwell),
+      geom_jitter(aes(color=microwell),
                   position=position_jitterdodge(
                     jitter.width=0.1,
-                  dodge.width=0.8
+                    dodge.width=0.8
                   ),
                   size=input$violin_pt,
                   alpha=0.4) +
@@ -343,7 +360,7 @@ server <- function(input, output, session){
         axis.ticks = element_line(size = input$axis_line_size)
       )
   })
-
+  
   #-----------------------------
   # plot mean and violin 
   #-----------------------------
@@ -444,6 +461,8 @@ server <- function(input, output, session){
 }
 
 shinyApp(ui, server)
+
+
 
 
 

@@ -30,7 +30,7 @@ The iOrganoAssay dataset is publicly available on Zenodo:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18627307.svg)](https://doi.org/10.5281/zenodo.18627307)
 
 The dataset includes:
-- `1.Microscopy/` — 234 large-area brightfield microscopy images
+- `1.Microscopy/` — 234 large-area brightfield(BF) microscopy images
 - `2.Segmentation/` — AI-segmented images (AIVIA, Leica Microsystems)
 - `3.Metrics/` — Morphometric data (area μm², perimeter μm, circularity)
 - `0.metadata.xlsx` — Excel metafile linking all dataset components

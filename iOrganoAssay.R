@@ -33,6 +33,10 @@ read_metric_vector <- function(path, metric){
 }
 
 # R/app.R
+
+#' Run iOrganoAssay Shiny App
+#' @export
+
 run_iOrganoAssay <- function() {
 
 #-----------------------------

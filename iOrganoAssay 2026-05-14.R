@@ -49,68 +49,68 @@ ui <- navbarPage(
     ")),
     uiOutput("dynamic_fontsize")
   ),
-
+  
   tabPanel(
     "Analysis",
     tags$div(id = "main_content_area", 
              uiOutput("dynamic_fontsize"),
-    sidebarLayout(
-      sidebarPanel(
-        h4("1. Metafile"),
-        fileInput("meta", "Upload metafile"),
-        hr(),
-        h4("2. Folder setting"),
-        textInput("img_dir", "C:/iOrganoAssay/1.Microscopy", DEFAULT_IMG),
-        textInput("seg_dir", "C:/iOrganoAssay/2.Segmentation", DEFAULT_SEG),
-        textInput("met_dir", "C:/iOrganoAssay/3.Metrics", DEFAULT_MET),
-        hr(),
-        h4("3. Category condition"),
-        selectInput("mice", "Mice", choices = NULL),
-        selectInput("passage", "Passage", choices = NULL),
-        selectInput("well", "Microwell",
-                    choices = NULL,
-                    multiple = TRUE
-        ),
-        selectInput("day", "Day", choices = NULL),
-        actionButton("apply", "Apply"),
-        hr(),
-        h4("4. Metric"),
-        selectInput("metric", "Metric",
-                    choices = c("area", "perimeter", "circularity")
-        ),
-        hr(),
-        h4("5. Plot control"),
-        sliderInput("pt_size", "Point size", 1, 10, 3),
-        sliderInput("line_size", "Line size", 0.5, 5, 1),
-        sliderInput("axis_size", "Axis text size", 8, 20, 12),
-        sliderInput("title_size", "Title size", 10, 25, 14),
-        sliderInput("axis_line_size", "Axis line thickness",
-                    min = 0.2, max = 3, value = 1, step = 0.1
-        ),
-        sliderInput("violin_pt", "Violin dot size", 0.5, 5, 1),
-        sliderInput("violin_line", "Line size", 0.5, 5, 1),
-        sliderInput("violin_axis", "Axis text size", 8, 20, 12),
-        sliderInput("violin_title", "Title size", 10, 25, 14),
-        sliderInput("ui_font_size", "All fonts size (px)", min = 10, max = 100, value = 14)
-      ),
-      mainPanel(
-        h4("Microscopy Images"),
-        uiOutput("images"),
-        hr(),
-        h4("Segmentation Images"),
-        uiOutput("seg_images"),
-        hr(),
-        h4("Mean + Std Plot"),
-        plotOutput("meanPlot", height = "300px"),
-        hr(),
-        h4("Violin Plot"),
-        plotOutput("violinPlot", height = "400px"),
-        hr(),
-        h4("Download plots"),
-        downloadButton("download_mean", "Download Daily graph (JPEG)"),
-        downloadButton("download_violin", "Download Violin plot (JPEG)")
-      )
-    )
+             sidebarLayout(
+               sidebarPanel(
+                 h4("1. Metafile"),
+                 fileInput("meta", "Upload metafile"),
+                 hr(),
+                 h4("2. Folder setting"),
+                 textInput("img_dir", "C:/iOrganoAssay/1.Microscopy", DEFAULT_IMG),
+                 textInput("seg_dir", "C:/iOrganoAssay/2.Segmentation", DEFAULT_SEG),
+                 textInput("met_dir", "C:/iOrganoAssay/3.Metrics", DEFAULT_MET),
+                 hr(),
+                 h4("3. Category condition"),
+                 selectInput("mice", "Mice", choices = NULL),
+                 selectInput("passage", "Passage", choices = NULL),
+                 selectInput("well", "Microwell",
+                             choices = NULL,
+                             multiple = TRUE
+                 ),
+                 selectInput("day", "Day", choices = NULL),
+                 actionButton("apply", "Apply"),
+                 hr(),
+                 h4("4. Metric"),
+                 selectInput("metric", "Metric",
+                             choices = c("area", "perimeter", "circularity")
+                 ),
+                 hr(),
+                 h4("5. Plot control"),
+                 sliderInput("pt_size", "Point size", 1, 10, 3),
+                 sliderInput("line_size", "Line size", 0.5, 5, 1),
+                 sliderInput("axis_size", "Axis text size", 8, 20, 12),
+                 sliderInput("title_size", "Title size", 10, 25, 14),
+                 sliderInput("axis_line_size", "Axis line thickness",
+                             min = 0.2, max = 3, value = 1, step = 0.1
+                 ),
+                 sliderInput("violin_pt", "Violin dot size", 0.5, 5, 1),
+                 sliderInput("violin_line", "Line size", 0.5, 5, 1),
+                 sliderInput("violin_axis", "Axis text size", 8, 20, 12),
+                 sliderInput("violin_title", "Title size", 10, 25, 14),
+                 sliderInput("ui_font_size", "All fonts size (px)", min = 10, max = 100, value = 14)
+               ),
+               mainPanel(
+                 h4("Microscopy Images"),
+                 uiOutput("images"),
+                 hr(),
+                 h4("Segmentation Images"),
+                 uiOutput("seg_images"),
+                 hr(),
+                 h4("Mean + Std Plot"),
+                 plotOutput("meanPlot", height = "300px"),
+                 hr(),
+                 h4("Violin Plot"),
+                 plotOutput("violinPlot", height = "400px"),
+                 hr(),
+                 h4("Download plots"),
+                 downloadButton("download_mean", "Download Daily graph (JPEG)"),
+                 downloadButton("download_violin", "Download Violin plot (JPEG)")
+               )
+             )
     )
   ),
   tabPanel(
@@ -224,20 +224,45 @@ server <- function(input, output, session) {
   })
   
   # filtering
-  filtered <- eventReactive(input$apply, {
-    df <- meta()
+  #filtered <- eventReactive(input$apply, {
+   # df <- meta()
     
-    if (input$mice != "All") df <- df %>% filter(mice == input$mice)
-    if (input$passage != "All") df <- df %>% filter(passage == input$passage)
-    if (input$day != "All") df <- df %>% filter(day == input$day)
+   #  if (input$mice != "All") df <- df %>% filter(mice == input$mice)
+   # if (input$passage != "All") df <- df %>% filter(passage == input$passage)
+   #  if (input$day != "All") df <- df %>% filter(day == input$day)
     
     # multi well
     
-    if (length(input$well) > 0) {
-      df <- df %>% filter(microwell %in% input$well)
-    }
+  # if (length(input$well) > 0) {
+  #    df <- df %>% filter(microwell %in% input$well)
+  #  }
     
-    df %>% arrange(day)
+  #  df %>% arrange(day)
+  
+  
+  filtered <- eventReactive(input$apply, {
+    
+    df <- meta()
+    
+    if(input$mice != "All") df <- df %>% filter(mice == input$mice)
+    if(input$passage != "All") df <- df %>% filter(passage == input$passage)
+    if(input$day != "All") df <- df %>% filter(day == input$day)
+  
+    # microwell 선택
+  
+    if(length(input$well) > 0){
+      df <- df %>% filter(microwell %in% input$well)
+    
+      # 🔥 핵심: 입력 순서 강제 적용
+      df$microwell <- factor(df$microwell, levels = input$well)
+      
+      }
+      
+    # day는 그대로 숫자 정렬 유지
+    df$day_num <- as.numeric(stringr::str_extract(df$day, "\\d+"))
+    
+    df %>% arrange(microwell, day_num)
+      
   })
   
   #-----------------------------
@@ -248,7 +273,10 @@ server <- function(input, output, session) {
     req(df)
     
     # alphabetical order
-    files <- sort(df$filename)
+    # files <- sort(df$filename)
+    
+    files <- df$filename
+    
     
     tags$div(
       style = "display:flex; flex-wrap:wrap; gap:15px;",
@@ -263,7 +291,9 @@ server <- function(input, output, session) {
         )
       })
     )
-  })#---
+  })
+  
+  #---
   
   #-----------------------------
   # SEG images (Grid)
@@ -273,7 +303,9 @@ server <- function(input, output, session) {
     req(df)
     
     # alphabetical order
-    files <- sort(df$filename)
+    # files <- sort(df$filename)
+    files <- df$filename 
+    
     
     tags$div(
       style = "display:flex; flex-wrap:wrap; gap:15px;",

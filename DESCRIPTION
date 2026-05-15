@@ -1,0 +1,26 @@
+Package: iOrganoAssay
+Type: Package
+Title: iOrganoAssay Shiny Application for Mouse Intestinal Organoid Image Analysis
+Version: 0.1.0
+Authors@R: person(given = "Sung-Wook",
+                  family = "Nam",
+                  email = "nams@knu.ac.kr",
+                  role = c("aut", "cre"))
+Description: Provides an interactive Shiny application (iOrganoAssay) for
+    the analysis of mouse intestinal organoid (mIO) microscopy images and
+    their associated morphometric metrics. The package bundles the Shiny
+    app inside R, so that users can launch it directly from R/RStudio
+    without copying or pasting any script.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 4.0.0)
+Imports:
+    shiny,
+    dplyr,
+    ggplot2,
+    readxl,
+    stringr,
+    tools
+RoxygenNote: 7.3.1

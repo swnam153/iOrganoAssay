@@ -1,0 +1,7 @@
+export(LaunchApp)
+import(shiny)
+import(dplyr)
+import(ggplot2)
+importFrom(readxl, read_excel)
+importFrom(stringr, str_extract)
+importFrom(tools, file_path_sans_ext)

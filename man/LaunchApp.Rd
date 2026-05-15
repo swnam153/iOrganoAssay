@@ -22,6 +22,15 @@ and does not return a value.
 bundled inside the \pkg{iOrganoAssay} package. The user does not need to
 copy or paste any script; calling this function launches the GUI
 directly in the default browser (or the RStudio Viewer pane).
+
+The application contains two tabs:
+\itemize{
+\item \strong{Analysis} -- daily-based monitoring of mouse intestinal
+organoid (mIO) morphology with mean and violin plots.
+\item \strong{Validation} -- evaluation of segmentation quality using
+Dice score, object accuracy, segmentation error, and normalized
+centroid error.
+}
 }
 \examples{
 \dontrun{

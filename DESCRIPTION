@@ -8,9 +8,12 @@ Authors@R: person(given = "Sung-Wook",
                   role = c("aut", "cre"))
 Description: Provides an interactive Shiny application (iOrganoAssay) for
     the analysis of mouse intestinal organoid (mIO) microscopy images and
-    their associated morphometric metrics. The package bundles the Shiny
-    app inside R, so that users can launch it directly from R/RStudio
-    without copying or pasting any script.
+    their associated morphometric metrics. The application includes an
+    Analysis tab for daily-based monitoring of organoid morphology and a
+    Validation tab for evaluating segmentation quality using Dice score and
+    related metrics. The package bundles the Shiny app inside R, so that
+    users can launch it directly from R/RStudio without copying or pasting
+    any script.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -22,5 +25,6 @@ Imports:
     ggplot2,
     readxl,
     stringr,
-    tools
+    tools,
+    magick
 RoxygenNote: 7.3.1

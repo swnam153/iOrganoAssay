@@ -5,6 +5,15 @@
 #' to copy or paste any script; calling this function launches the GUI
 #' directly in the default browser (or the RStudio Viewer pane).
 #'
+#' The application contains two tabs:
+#' \itemize{
+#'   \item \strong{Analysis} -- daily-based monitoring of mouse intestinal
+#'         organoid (mIO) morphology with mean and violin plots.
+#'   \item \strong{Validation} -- evaluation of segmentation quality using
+#'         Dice score, object accuracy, segmentation error, and normalized
+#'         centroid error.
+#' }
+#'
 #' @param launch.browser Logical. If \code{TRUE} (default), the app is
 #'   opened in the user's default web browser. If \code{FALSE}, it
 #'   runs in the RStudio Viewer pane.

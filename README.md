@@ -16,6 +16,9 @@ The application contains two tabs:
 ```r
 # install.packages("remotes")   # if not already installed
 remotes::install_github("swnam153/iOrganoAssay")
+
+remotes::install_github("swnam153/iOrganoAssay", force = TRUE)
+
 ```
 
 ## Usage

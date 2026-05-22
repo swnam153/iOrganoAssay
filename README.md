@@ -6,7 +6,7 @@
 - Code (GitHub): https://github.com/swnam153/iOrganoAssay
 - License (code): MIT | License (data): CC0
 
-<img width="1824" height="1538" alt="image" src="https://github.com/user-attachments/assets/f0c05701-58df-4e1e-8f72-0f81a77782c4" />
+<img width="912" height="769" alt="image" src="https://github.com/user-attachments/assets/f0c05701-58df-4e1e-8f72-0f81a77782c4" />
 
 
 

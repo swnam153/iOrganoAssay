@@ -26,8 +26,7 @@ LaunchApp()
 This opens the iOrganoAssay GUI in your default web browser.
 No copy-pasting of scripts is required.
 
-<img width="912" height="769" alt="image" src="https://github.com/user-attachments/assets/f0c05701-58df-4e1e-8f72-0f81a77782c4" />
-
+<img width="678" height="579" alt="image" src="https://github.com/user-attachments/assets/a6c37efc-62c9-427b-a030-a0d715ca654a" />
 
 
 ## Overview

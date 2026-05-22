@@ -66,8 +66,6 @@ These are installed automatically by `remotes::install_github()`.
 
 
 Contact
-Sung-Wook Nam, Ph.D.
-Department of Molecular Medicine, School of Medicine
 Pacian Sung-Wook Nam, Ph.D.
 Department of Molecular Medicine, School of Medicine,
 Kyungpook National University, Daegu 41405, Republic of Korea

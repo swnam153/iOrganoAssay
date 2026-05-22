@@ -23,7 +23,7 @@ Dataset Structure
 
 Download the dataset from Zenodo: https://doi.org/10.5281/zenodo.18627306
 
-## iOrganoAssay/
+iOrganoAssay/
 ├── 0.Metafile.xlsx             # Central metadata file (required by the App)
 ├── 1.Microscopy/               # 234 PNG files — raw brightfield microscopy images
 ├── 2.Segmentation/             # 234 PNG files — AIVIA segmentation overlay images

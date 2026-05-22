@@ -10,7 +10,7 @@
 
 
 
-##Overview
+Overview
 
 The iOrganoAssay dataset consists of 234 large-area brightfield microscopy images of mouse intestinal organoids (mIO) cultured in Matrigel dome regions (~3 mm), acquired using an automated stage-equipped widefield microscope. Upon dextran sulfate sodium (DSS) treatment, daily morphological changes were captured, segmented, and quantified. Morphometric metrics — area (μm²), perimeter (μm), and circularity — are extracted per organoid and organized for downstream visualization and statistical analysis.
 The iOrganoAssay App (R/Shiny) provides two operational tabs:
@@ -19,11 +19,11 @@ The iOrganoAssay App (R/Shiny) provides two operational tabs:
   line plots and violin plots) by mouse line, passage (p), microwell (W), day (d), and treatment (t).
 - **Validation** — evaluation of segmentation quality using Dice score, accuracy (Acc), segmentation error (SegErr), and centroid error (CenErr).
 
-##Dataset Structure
+Dataset Structure
 
 Download the dataset from Zenodo: https://doi.org/10.5281/zenodo.18627306
 
-                                ```
+```
 iOrganoAssay/
 ├── 0.Metafile.xlsx          # Central metadata file (required by the App)
 ├── 1.Microscopy/            # 234 PNG files — raw brightfield microscopy images

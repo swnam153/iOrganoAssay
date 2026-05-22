@@ -9,16 +9,8 @@
 The application contains two tabs:
 
 - **Analysis** — daily-based monitoring of organoid morphology (mean ± SD
-  line plots and violin plots) by mouse line, passage, microwell, and day.
-- **Validation** — evaluation of segmentation quality using Dice score,
-  object accuracy, object segmentation error, and normalized centroid
-  error. Supports multiple Validation Sets (Add / Remove).
-
-
-  
-
-An R package that bundles the **iOrganoAssay** Shiny application for
-mouse intestinal organoid (mIO) microscopy image analysis.
+  line plots and violin plots) by mouse line, passage (p), microwell (W), day (d), and treatment (t).
+- **Validation** — evaluation of segmentation quality using Dice score, accuracy (Acc), segmentation error (SegErr), and centroid error (CenErr).
 
 
 

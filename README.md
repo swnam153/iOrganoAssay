@@ -6,11 +6,6 @@
 - Code (GitHub): https://github.com/swnam153/iOrganoAssay
 - License (code): MIT | License (data): CC0
 
-
-
-An R package that bundles the **iOrganoAssay** Shiny application for
-mouse intestinal organoid (mIO) microscopy image analysis.
-
 The application contains two tabs:
 
 - **Analysis** — daily-based monitoring of organoid morphology (mean ± SD
@@ -18,6 +13,14 @@ The application contains two tabs:
 - **Validation** — evaluation of segmentation quality using Dice score,
   object accuracy, object segmentation error, and normalized centroid
   error. Supports multiple Validation Sets (Add / Remove).
+
+
+  
+
+An R package that bundles the **iOrganoAssay** Shiny application for
+mouse intestinal organoid (mIO) microscopy image analysis.
+
+
 
 ## Installation
 

@@ -59,26 +59,6 @@ iOrganoAssay/
 Note: The App requires folders 1, 2, and 3 (plus the metafile). Folders 4 and 5 are high-resolution archives for reuse. Folder 6 is used in the Validation tab.
 
 
-## Installation
-
-```r
-# install.packages("remotes")   # if not already installed
-remotes::install_github("swnam153/iOrganoAssay")
-
-remotes::install_github("swnam153/iOrganoAssay", force = TRUE)
-
-```
-
-## Usage
-
-```r
-library(iOrganoAssay)
-LaunchApp()
-```
-
-This opens the iOrganoAssay GUI in your default web browser.
-No copy-pasting of scripts is required.
-
 ## Dependencies
 
 `shiny`, `dplyr`, `ggplot2`, `readxl`, `stringr`, `tools`, `magick`

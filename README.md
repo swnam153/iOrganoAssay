@@ -1,5 +1,7 @@
 # iOrganoAssay
 
+iOrganoAssay (images of Organoid Assay) is an R package that bundles an interactive Shiny application for connecting microscopy images of mouse intestinal organoids (mIOs) with downstream assay data. The package enables systematic daily monitoring of organoid morphology and quantitative evaluation of image segmentation quality.
+
 An R package that bundles the **iOrganoAssay** Shiny application for
 mouse intestinal organoid (mIO) microscopy image analysis.
 
